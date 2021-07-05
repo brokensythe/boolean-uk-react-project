@@ -54,6 +54,8 @@
 .login-link {
     text-align: right;
     font-size: 12px;
+    text-decoration: none;
+    color: #2E3532;
 }
 
 .login-link:hover {
