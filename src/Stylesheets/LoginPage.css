@@ -9,13 +9,13 @@
   
     background-color: #000d30;
     color: #fff;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: italic;
 }
 
 .main-body {
     display: grid;
     place-content: center;
+    color: #2E3532;
 }
 
 .login-form {
@@ -23,14 +23,47 @@
     gap: 5px;
 }
 
+.login-form label {
+    font-size: 1.7rem;
+}
+
 .login-button {
     width: 30%;
+    height: 1.7rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+    color: #2E3532;
+    background-color: #ACC8E5;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    transform: scale(1.1);
+    transition: 100ms;
 }
 
 .login-form-inputs {
      margin-left: 10px;
+     border-radius: 20px;
+     border: 1px solid black;
+     height: 1.5rem;
+     padding: 0 0.3rem;
 }
 
 .login-link {
     text-align: right;
+    font-size: 12px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer {
+    display: grid;
+    place-content: center;
+    color: #fff;
+    background-color: #000;
 }
