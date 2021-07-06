@@ -1,3 +1,14 @@
 {
-    "users":[]
+  "users": [
+    {
+      "userName": "I'm one ",
+      "password": "step behind",
+      "id": 1
+    },
+    {
+      "userName": "more info that should",
+      "password": "not go through",
+      "id": 2
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 import "../Stylesheets/LoginPage.css"
-import LoginForm from "./LoginForm"
+import RegistrationForm from "./RegistrationForm"
 
-function LoginPage() {
+function RegistrationPage() {
     return (
         <>
         <header className="header">
@@ -13,10 +13,10 @@ function LoginPage() {
         <h1>Playlist Editor</h1>
         </header>
         <main className="main-body">
-            <LoginForm />
+            <RegistrationForm />
         </main>
         </>
     )
 }
 
-export default LoginPage
+export default RegistrationPage

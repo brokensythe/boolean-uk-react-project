@@ -11,3 +11,11 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+.footer {
+  display: grid;
+  place-content: center;
+  color: #fff;
+  background-color: #000;
+  min-height: 70px;
+}
