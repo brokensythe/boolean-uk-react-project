@@ -6,13 +6,12 @@ function RegistrationForm() {
     const { registrationFailed, registrationSuccessful, registered } = useRegistration()
 
     const setCurrentUser = useStore(store=>store.setCurrentUser)
-    const currentUser = useStore(store=>store.currentUser)
 
     function handlesubmit(e) {
         e.preventDefault()
 
         const newUser = {
-            userName: e.target.username.value,
+            username: e.target.username.value,
             password: e.target.password.value
         }
 
@@ -30,11 +29,9 @@ function RegistrationForm() {
         .then(setCurrentUser)
     }
 
-    console.log(currentUser)
-
     return (
         <>
-            {registered ? null : <p>The information did not successfully reach our servers.  Please try again later</p>}
+            {registered ? null : <p className="popup">The information did not successfully reach our servers.  Please try again later</p>}
             <form onSubmit={handlesubmit} className="login-form">
                 <label>
                     Please pick a username

@@ -1,14 +1,12 @@
 {
   "users": [
     {
-      "userName": "I'm one ",
-      "password": "step behind",
+      "username": "LinLin",
+      "password": "cat",
       "id": 1
-    },
-    {
-      "userName": "more info that should",
-      "password": "not go through",
-      "id": 2
     }
+  ],
+  "playlists": [
+      
   ]
 }
