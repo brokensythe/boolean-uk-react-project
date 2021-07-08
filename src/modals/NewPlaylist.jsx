@@ -5,6 +5,7 @@ import useStore from '../hooks/useStore'
 function NewPlaylist({ className }) {
 
     const currentUser = useStore(store=>store.currentUser)
+    const closeModal = useStore(store=>store.closeModal)
 
     function handlesubmit(e) {
         e.preventDefault()
@@ -16,12 +17,20 @@ function NewPlaylist({ className }) {
             songs: []
         }
 
-        
+        fetch("http://localhost:4000/playlists",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(playlistInfo)
+        })
+
+        closeModal()
     }
 
     return (
         <div className={`new-playlist ${className}`}>
-            <form className="popup">
+            <form onSubmit={handlesubmit} className="popup">
                 <label htmlFor="name">Playlist Name</label>
                 <input type="text" id="name" />
                 <label htmlFor="image">Add an image URL for your playlist</label>

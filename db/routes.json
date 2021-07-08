@@ -1,0 +1,4 @@
+{
+    "/users": "/users?_embed=playlists",
+    "/users/*": "/users/$1?_embed=playlists"
+  }

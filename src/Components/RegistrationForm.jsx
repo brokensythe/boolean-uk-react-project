@@ -1,11 +1,14 @@
 import useStore from "../hooks/useStore"
 import useRegistration from "../hooks/useRegistration"
+import { useHistory } from "react-router-dom"
 
 function RegistrationForm() {
 
     const { registrationFailed, registrationSuccessful, registered } = useRegistration()
 
     const setCurrentUser = useStore(store=>store.setCurrentUser)
+    
+    const history = useHistory()
 
     function handlesubmit(e) {
         e.preventDefault()
@@ -26,7 +29,10 @@ function RegistrationForm() {
                 registrationSuccessful()
                 return resp.json()
         }, resp=> registrationFailed())
-        .then(setCurrentUser)
+        .then(data=>{
+            setCurrentUser(data)
+            history.push("/playlist")
+        })
     }
 
     return (

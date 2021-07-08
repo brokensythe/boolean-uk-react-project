@@ -5,6 +5,8 @@ import RegistrationPage from "./Components/RegistrationPage";
 import PlaylistPage from "./Components/PlaylistPage";
 import SearchPage from "./Components/SearchPage";
 import ModalContainer from "./modals/ModalContainer";
+import useStore from "./hooks/useStore";
+import { useEffect } from "react";
 
 export default function App() {
   return  (

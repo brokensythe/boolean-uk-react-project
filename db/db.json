@@ -4,9 +4,435 @@
       "username": "LinLin",
       "password": "cat",
       "id": 1
+    },
+    {
+      "username": "Ade",
+      "password": "nooneknows",
+      "id": 2
+    },
+    {
+      "username": "Jonathon",
+      "password": "cool dude",
+      "id": 3
     }
   ],
   "playlists": [
-      
+    {
+      "name": "new playlist",
+      "image": "http://www.thecuriosityworkshop.com/wp-content/uploads/2015/03/01-rubberduck-hongkong.jpg",
+      "userId": 1,
+      "songs": [],
+      "id": 1
+    },
+    {
+      "name": "maple syrup",
+      "image": "https://images.rove.me/w_1920,q_85/avf8kvykfqrpxvmprmnk/toronto-fresh-maple-syrup.jpg",
+      "userId": 1,
+      "songs": [],
+      "id": 2
+    },
+    {
+      "name": "whipped cream",
+      "image": "https://ohsweetbasil.com/wp-content/uploads/Stabilized-whipped-cream-6.jpg",
+      "userId": 1,
+      "songs": [],
+      "id": 3
+    },
+    {
+      "name": "relaxing music",
+      "image": "https://i.ytimg.com/vi/1ZYbU82GVz4/maxresdefault.jpg",
+      "userId": 3,
+      "songs": [],
+      "id": 4
+    }
+  ],
+  "genres": [
+    {
+      "id": 200,
+      "name": "Dirty South",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 2,
+      "name": "African Music",
+      "image": "https://cdns-images.dzcdn.net/images/misc/703413adf47ad8a6001b438f7608a2be/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 123,
+      "name": "Russian Rap"
+    },
+    {
+      "id": 3,
+      "name": "Afro Pop"
+    },
+    {
+      "id": 4,
+      "name": "Biguine",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Coupé-Décalé",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Mauritian Sega",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Mauritian Seggae",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Mauritian Swag",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Touareg",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Zouglou",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Zouk",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Arabic Music",
+      "image": "https://cdns-images.dzcdn.net/images/misc/2df05f13d3244dbdd1ae0206b4605cba/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Chaabi",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Charki",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Raï"
+    },
+    {
+      "id": 16,
+      "name": "Asian Music",
+      "image": "https://cdns-images.dzcdn.net/images/misc/dd6d2756465b22488dff5d8663e86688/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Chinese Pop"
+    },
+    {
+      "id": 20,
+      "name": "Indonesian Pop"
+    },
+    {
+      "id": 22,
+      "name": "J-Pop"
+    },
+    {
+      "id": 23,
+      "name": "K-Pop"
+    },
+    {
+      "id": 24,
+      "name": "Malaysian Pop"
+    },
+    {
+      "id": 25,
+      "name": "Indonesian Music",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Thai Country",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Thai Pop"
+    },
+    {
+      "id": 29,
+      "name": "Thai Retro"
+    },
+    {
+      "id": 36,
+      "name": "Flamenco"
+    },
+    {
+      "id": 39,
+      "name": "Iskelmä",
+      "image": "https://cdns-images.dzcdn.net/images/misc/93cde56d607577ebad69a11ce0d1411b/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 45,
+      "name": "Schlager & Volksmusik",
+      "image": "https://cdns-images.dzcdn.net/images/misc/7874588931619df051f4b019101825ad/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 49,
+      "name": "Turkish Folk Music"
+    },
+    {
+      "id": 58,
+      "name": "Banda/Grupero"
+    },
+    {
+      "id": 60,
+      "name": "Folklore latino-américain"
+    },
+    {
+      "id": 75,
+      "name": "Brazilian Music",
+      "image": "https://cdns-images.dzcdn.net/images/misc/01b12a3f3582899a13b664cea703a335/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 76,
+      "name": "Axé/Forró",
+      "image": "https://cdns-images.dzcdn.net/images/misc/7889d579f1ad0cffde9bf71ac38d86c3/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 81,
+      "name": "Indian Music",
+      "image": "https://cdns-images.dzcdn.net/images/misc/b098161d9a824eef314bc38b985594a1/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 84,
+      "name": "Country",
+      "image": "https://cdns-images.dzcdn.net/images/misc/6eca3188f724f04843a15e3e575751a5/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 85,
+      "name": "Alternative",
+      "image": "https://cdns-images.dzcdn.net/images/misc/fd252ab727d9a3b0b3c29014873f8f57/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 86,
+      "name": "Indie Pop"
+    },
+    {
+      "id": 88,
+      "name": "Thai Indie",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 89,
+      "name": "Indé Finlandaise"
+    },
+    {
+      "id": 90,
+      "name": "Estonian Indie"
+    },
+    {
+      "id": 91,
+      "name": "Latin Alternative"
+    },
+    {
+      "id": 109,
+      "name": "Electro Hip Hop",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 116,
+      "name": "Rap/Hip Hop",
+      "image": "https://cdns-images.dzcdn.net/images/misc/5c27115d3b797954afff59199dad98d1/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 121,
+      "name": "German Rap"
+    },
+    {
+      "id": 122,
+      "name": "Reggaeton",
+      "image": "https://cdns-images.dzcdn.net/images/misc/44dfebf3cf943dd82759d9bd9063767a/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 123,
+      "name": "Russian Rap"
+    },
+    {
+      "id": 124,
+      "name": "Finnish Rap"
+    },
+    {
+      "id": 125,
+      "name": "Kwaito",
+      "image": "https://cdns-images.dzcdn.net/images/misc/d8eb8500bc15953adf64096ed1ea658d/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 128,
+      "name": "French Rap"
+    },
+    {
+      "id": 129,
+      "name": "Jazz",
+      "image": "https://cdns-images.dzcdn.net/images/misc/91468ecc5dfdd19c42a43d2cbdf27059/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 94,
+      "name": "Alternative Brazil"
+    },
+    {
+      "id": 96,
+      "name": "Nursery Rhymes",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 98,
+      "name": "Classical",
+      "image": "https://cdns-images.dzcdn.net/images/misc/609f69b669b242252aa8ee09b5597655/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 99,
+      "name": "Baroque",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 101,
+      "name": "Early Music",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 102,
+      "name": "Modern",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 103,
+      "name": "Opera",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 104,
+      "name": "Renaissance",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 105,
+      "name": "Romantic",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 106,
+      "name": "Electro",
+      "image": "https://cdns-images.dzcdn.net/images/misc/15df4502c1c58137dae5bdd1cc6f0251/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 107,
+      "name": "Chill Out/Trip-Hop/Lounge",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 110,
+      "name": "Electro Pop/Electro Rock",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 111,
+      "name": "Techno/House",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 112,
+      "name": "South African House"
+    },
+    {
+      "id": 113,
+      "name": "Dance",
+      "image": "https://cdns-images.dzcdn.net/images/misc/bd5fdfa1a23e02e2697818e09e008e69/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 114,
+      "name": "Dancefloor",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 115,
+      "name": "Trance",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 131,
+      "name": "Vocal Jazz",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 132,
+      "name": "Pop",
+      "image": "https://cdns-images.dzcdn.net/images/misc/db7a604d9e7634a67d45cfc86b48370a/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 133,
+      "name": "Indie Pop/Folk"
+    },
+    {
+      "id": 134,
+      "name": "International Pop",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 135,
+      "name": "Russian Pop"
+    },
+    {
+      "id": 136,
+      "name": "Pop finlandaise"
+    },
+    {
+      "id": 146,
+      "name": "Dub",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 147,
+      "name": "Ska",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 137,
+      "name": "Turkish Pop"
+    },
+    {
+      "id": 138,
+      "name": "Latin Pop"
+    },
+    {
+      "id": 141,
+      "name": "Variété Internationale"
+    },
+    {
+      "id": 142,
+      "name": "Hungarian Pop-Rock"
+    },
+    {
+      "id": 143,
+      "name": "French Pop"
+    },
+    {
+      "id": 144,
+      "name": "Reggae",
+      "image": "https://cdns-images.dzcdn.net/images/misc/7b901a98628cf879e1465f1dfd697e00/250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 145,
+      "name": "Dancehall/Ragga",
+      "image": "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"
+    },
+    {
+      "id": 191,
+      "name": "Christian Rock"
+    }
   ]
 }

@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import useUsers from "../hooks/useUsers"
+import useStore from "../hooks/useStore"
 
 function LoginForm() {
 
+    const setCurrentUser = useStore(store=>store.setCurrentUser)
+
     const { users, noSuchUser, userNotFound, wrongPassword, passwordIncorrect } = useUsers()
+
+    const history = useHistory()
 
     function handlesubmit(e) {
         e.preventDefault()
@@ -16,7 +21,8 @@ function LoginForm() {
         }
 
         if (correctUser.password===e.target.password.value) {
-            // useHistory().push("<correct url here>")
+            setCurrentUser(correctUser)
+            history.push("/playlist")
         }else wrongPassword()
     }
 
