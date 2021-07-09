@@ -44,6 +44,16 @@ const useStore = create((set, get) => ({
     setSelectedSong: (object)=>{set(state=>({selectedSong: object}))},
     currentPlaylist: {},
     setCurrentPlaylist: (object)=>{set(state=>({currentPlaylist: object}))},
+    users: [],
+    setUsers: (array)=>{set(state=>({users: array}))},
+    userNotFound: false,
+    usernameInDatabase: true,
+    noSuchUser: ()=>{set(state=>({
+        userNotFound : true,
+        usernameInDatabase : false
+    }))},
+    passwordIncorrect: false,
+    wrongPassword: ()=>{set(state=>({passwordIncorrect : true}))}
     }
 ) )
 

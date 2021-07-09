@@ -1,14 +1,24 @@
 import { Link, useHistory } from "react-router-dom"
-import useUsers from "../hooks/useUsers"
 import useStore from "../hooks/useStore"
+import { useEffect } from "react";
 
 function LoginForm() {
 
     const setCurrentUser = useStore(store=>store.setCurrentUser)
-
-    const { users, noSuchUser, userNotFound, wrongPassword, passwordIncorrect } = useUsers()
+    const users = useStore(store=>store.users)
+    const setUsers = useStore(store=>store.setUsers)
+    const noSuchUser = useStore(store=>store.noSuchUser)
+    const wrongPassword = useStore(store=>store.wrongPassword)
+    const passwordIncorrect = useStore(store=>store.passwordIncorrect)
+    const userNotFound = useStore(store=>store.userNotFound)
 
     const history = useHistory()
+
+    useEffect(()=>{
+        fetch("http://localhost:4000/users")
+        .then(resp=>resp.json())
+        .then(setUsers)
+    }, [setUsers])
 
     function handlesubmit(e) {
         e.preventDefault()
