@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom"
+import useStore from "../hooks/useStore"
 
 function MainHeader() {
+
+    const setCurrentUser = useStore(store=>store.setCurrentUser)
+    const currentUser = useStore(store=>store.currentUser)
+
     return (
         <header className="header">
                 <img
@@ -15,6 +20,9 @@ function MainHeader() {
                     </Link>
                     <Link className="login-link" to="/search">
                         <span>Search</span>
+                    </Link>
+                    <Link onClick={()=>setCurrentUser({})} className="login-link" to="/login">
+                        <span>Logout</span>
                     </Link>
                 </nav>
             </header>

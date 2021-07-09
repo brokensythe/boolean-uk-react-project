@@ -3,6 +3,7 @@ import useStore from "../hooks/useStore"
 import { useEffect } from "react";
 import MainHeader from './MainHeader';
 import { Link } from "react-router-dom"
+import { loggedIn } from '../helpers'
 
 function PlaylistPage({ className }) {
 
@@ -13,11 +14,14 @@ function PlaylistPage({ className }) {
     const modal = useStore(store=>store.modal)
     const setCurrentPlaylist = useStore(store=>store.setCurrentPlaylist)
 
+    const userAvailable = loggedIn(currentUser)
+
+    if (!userAvailable) return null
+
     useEffect(()=>{
       getPlaylists(currentUser.id)
     },[modal])
 
-    console.log(currentPlaylists)
 
     return currentPlaylists ? (
         <div className={`correction ${className}`}>

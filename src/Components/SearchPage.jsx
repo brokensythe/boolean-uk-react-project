@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import useGenres from '../hooks/useGenres'
 import useStore from "../hooks/useStore"
 import MainHeader from './MainHeader';
+import { loggedIn } from '../helpers'
 
 function SearchPage({ className }) {
 
@@ -14,6 +15,10 @@ function SearchPage({ className }) {
     const setSelectedSong = useStore(store=>store.setSelectedSong)
     const genres = useGenres()
 
+    const userAvailable = loggedIn(currentUser)
+
+    if (!userAvailable) return null
+
     function handleSubmit(e) {
         e.preventDefault()
 
@@ -24,7 +29,7 @@ function SearchPage({ className }) {
     }
 
 
-    return (
+    return ( genres.length<84 ? <h1>Loading Genres...</h1> :
         <div className={`correction ${className}`}>
             <MainHeader />
             <main className="main-body wrapper">

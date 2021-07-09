@@ -1,10 +1,16 @@
 import MainHeader from "./MainHeader"
 import styled from 'styled-components'
 import useStore from "../hooks/useStore"
+import { loggedIn } from '../helpers'
 
 function SongPage({ className }) {
 
     const currentPlaylist = useStore(store=>store.currentPlaylist)
+    const currentUser = useStore(store=>store.currentUser)
+
+    const userAvailable = loggedIn(currentUser)
+
+    if (!userAvailable) return null
 
     return currentPlaylist ? (
         <div className={`correction ${className}`}>

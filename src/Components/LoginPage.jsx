@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import LoginForm from "./LoginForm"
 
 function LoginPage({ className }) {
+
     return (
         <div className={`correction ${className}`}>
             <header className="header">
