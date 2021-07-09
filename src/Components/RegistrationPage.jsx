@@ -82,16 +82,4 @@ export default styled(RegistrationPage)`
         height: 1.5rem;
         padding: 0 0.3rem;
     }
-
-    .login-link {
-        text-align: right;
-        font-size: 12px;
-        text-decoration: none;
-        color: #2E3532;
-    }
-
-    .login-link:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
 `

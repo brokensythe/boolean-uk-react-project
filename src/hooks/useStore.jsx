@@ -29,7 +29,10 @@ const useStore = create((set, get) => ({
         .then(data => JSON.parse(data.contents))
         .then(data => {
             let myResults = []
-            for (const result of data.data) {
+            for (let result of data.data) {
+                if (result.album.cover_medium===null) {
+                    result = {...result, album: {cover_medium: "https://cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg"}}
+                }
                 if (myResults.map(result=>result.title).includes(result.title)){
 
                 }

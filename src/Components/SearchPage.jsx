@@ -17,6 +17,8 @@ function SearchPage({ className }) {
 
     const userAvailable = loggedIn(currentUser)
 
+    console.log(searchResults);
+
     if (!userAvailable) return null
 
     function handleSubmit(e) {
@@ -62,7 +64,9 @@ function SearchPage({ className }) {
                                 }
                             } className="genre-items">
                             <img src={album.cover_medium} alt="genre image" className="genre-image"/>
-                            <p>{title}</p>
+                            <p>Artist: {artist.name}</p>
+                            <p>Track: {title}</p>
+                            <p>Album: {album.title}</p>
                             </div>)
                         }
                     </div>
@@ -115,9 +119,6 @@ export default styled(SearchPage)`
         color: #fff;
     }
 
-    .main-body {
-    }
-
     .wrapper {
         max-width: 80%;
         margin-left: 11rem;
@@ -133,7 +134,7 @@ export default styled(SearchPage)`
     .genre-container {
         display: grid;
         grid-template-columns: repeat(4, 300px);
-        margin-top: 3rem;
+        margin: 5rem 0;
         gap: 2rem;
     }
 

@@ -10,6 +10,8 @@ function SongPage({ className }) {
 
     const userAvailable = loggedIn(currentUser)
 
+    console.log(currentPlaylist);
+
     if (!userAvailable) return null
 
     return currentPlaylist ? (
@@ -21,7 +23,9 @@ function SongPage({ className }) {
                     {currentPlaylist.songs.map(song=>
                         <div className="playlist-items">
                             <img src={song.image} alt="playlist image" className="playlist-image"/>
-                            <p>{song.name}</p>
+                            <p>Artist: {song.artist}</p>
+                            <p>Track: {song.name}</p>
+                            <p>Album: {song.album}</p>
                         </div>
                     )}
                 </div>
@@ -67,13 +71,6 @@ export default styled(SongPage)`
         color: #fff;
     }
 
-    .main-body {
-        display: grid;
-        justify-content: center;
-        align-content: space-between;
-        gap: 5rem
-    }
-
     .wrapper {
         margin-left: 11rem;
         margin-right: auto;
@@ -81,17 +78,10 @@ export default styled(SongPage)`
         padding-bottom: 1rem;
     }
 
-    .add-playlist {
-        font-size: 1rem;
-    }
-
-    .add-playlist:hover {
-        cursor: pointer;
-    }
-
     .playlist-container {
         display: grid;
         grid-template-columns: repeat(4, 350px);
+        margin-top: 2rem;
     }
 
     .playlist-image {

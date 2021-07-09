@@ -43,7 +43,7 @@ export default styled(ModalContainer)`
   display: grid;
   place-content: center;
 
-  background-color: #00000040;
+  background-color: #00000070;
 
   z-index: 100;
 

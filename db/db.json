@@ -52,7 +52,17 @@
       "name": "relaxing music",
       "image": "https://i.ytimg.com/vi/1ZYbU82GVz4/maxresdefault.jpg",
       "userId": 3,
-      "songs": [],
+      "songs": [
+        {
+          "id": 91483510,
+          "name": "Sputnik",
+          "artistId": 524601,
+          "artist": "Public Service Broadcasting",
+          "albumId": 9280622,
+          "album": "The Race For Space",
+          "image": "https://cdns-images.dzcdn.net/images/cover/73b94e9898b390812fd2c8a005adeb3a/250x250-000000-80-0-0.jpg"
+        }
+      ],
       "id": 4
     },
     {
