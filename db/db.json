@@ -21,7 +21,17 @@
       "name": "new playlist",
       "image": "http://www.thecuriosityworkshop.com/wp-content/uploads/2015/03/01-rubberduck-hongkong.jpg",
       "userId": 1,
-      "songs": [],
+      "songs": [
+        {
+          "id": 3111030,
+          "name": "I'm Gonna Be (500 Miles)",
+          "artistId": 2887,
+          "artist": "The Proclaimers",
+          "albumId": 300603,
+          "album": "Sunshine on Leith",
+          "image": "https://cdns-images.dzcdn.net/images/cover/4d1b96be3c5bce860156f4fc53e661d0/250x250-000000-80-0-0.jpg"
+        }
+      ],
       "id": 1
     },
     {
@@ -44,6 +54,13 @@
       "userId": 3,
       "songs": [],
       "id": 4
+    },
+    {
+      "name": "big beats manifesto",
+      "image": "http://i1.ytimg.com/vi/BpRZSPNZY7w/maxresdefault.jpg",
+      "userId": 3,
+      "songs": [],
+      "id": 5
     }
   ],
   "genres": [

@@ -4,9 +4,12 @@ import useStore from '../hooks/useStore'
 
 import NewPlaylist from './NewPlaylist'
 
+import AddASong from './AddASong'
+
 const modals = {
   '': null,
-  newPlaylist: NewPlaylist
+  newPlaylist: NewPlaylist,
+  addASong: AddASong
 }
 
 function ModalContainer({ className }) {
@@ -30,7 +33,7 @@ function ModalContainer({ className }) {
 }
 
 export default styled(ModalContainer)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import useStore from "../hooks/useStore"
 import { useEffect } from "react";
+import MainHeader from './MainHeader';
+import { Link } from "react-router-dom"
 
 function PlaylistPage({ className }) {
 
@@ -8,32 +10,31 @@ function PlaylistPage({ className }) {
     const setModal = useStore(store=>store.setModal)
     const currentPlaylists = useStore(store=>store.currentPlaylists)
     const getPlaylists = useStore(store=>store.getPlaylists)
+    const modal = useStore(store=>store.modal)
+    const setCurrentPlaylist = useStore(store=>store.setCurrentPlaylist)
 
     useEffect(()=>{
       getPlaylists(currentUser.id)
-    },[currentPlaylists])
+    },[modal])
 
     console.log(currentPlaylists)
 
     return currentPlaylists ? (
         <div className={`correction ${className}`}>
-            <header className="header">
-                <img
-                src="https://boolean.co.uk/favicon-32x32.png"
-                alt="logo"
-                width="50px"
-            />
-            <h1>Playlist Editor</h1>
-            </header>
+            <MainHeader />
             <main className="main-body wrapper">
                 <h2>Hello {currentUser.username}</h2>
                 <div>
                     <h2>Your Playlists</h2>
                     <div className="playlist-container">
-                        {currentPlaylists.map(playlist=><div className="playlist-items">
+                        {currentPlaylists.map(playlist=>
+                        <Link onMouseDown={()=>{setCurrentPlaylist(playlist)}} className="playlist-link" to="/playlist">
+                            <div className="playlist-items">
                                 <img src={playlist.image} alt="playlist image" className="playlist-image"/>
                                 <p>{playlist.name}</p>
-                        </div>)}
+                            </div>
+                        </Link>
+                        )}
                     </div>
                 </div>
                 <p className="add-playlist" onClick={()=>setModal('newPlaylist')}>&#43; create a new playlist</p>
@@ -53,13 +54,30 @@ export default styled(PlaylistPage)`
         width: 100%;
         padding: 0 2rem;
         display: grid;
-        grid-template-columns: 52px auto;
+        grid-template-columns: 52px auto auto;
     
         align-items: center;
     
         background-color: #000d30;
         color: #fff;
         font-style: italic;
+    }
+
+    .header nav {
+        justify-self: right;
+        margin-right: 3rem;
+    }
+
+    nav span{
+        margin-left: 2rem;
+        font-size: 17px;
+    }
+
+    .login-link {
+        text-align: right;
+        font-size: 12px;
+        text-decoration: none;
+        color: #fff;
     }
 
     .main-body {
@@ -76,12 +94,9 @@ export default styled(PlaylistPage)`
         padding-bottom: 1rem;
     }
 
-    .add-playlist {
-        font-size: 1rem;
-    }
-
-    .add-playlist:hover {
-        cursor: pointer;
+    .playlist-link {
+        text-decoration: none;
+        color: #000;
     }
 
     .playlist-container {
@@ -97,5 +112,14 @@ export default styled(PlaylistPage)`
 
     .playlist-items {
         width: 190px
+        cursor: pointer
+    }
+
+    .add-playlist {
+        font-size: 1rem;
+    }
+
+    .add-playlist:hover {
+        cursor: pointer;
     }
 `

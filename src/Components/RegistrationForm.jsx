@@ -31,7 +31,7 @@ function RegistrationForm() {
         }, resp=> registrationFailed())
         .then(data=>{
             setCurrentUser(data)
-            history.push("/playlist")
+            history.push("/playlists")
         })
     }
 

@@ -6,6 +6,7 @@ function NewPlaylist({ className }) {
 
     const currentUser = useStore(store=>store.currentUser)
     const closeModal = useStore(store=>store.closeModal)
+    const getPlaylists = useStore(store=>store.getPlaylists)
 
     function handlesubmit(e) {
         e.preventDefault()
@@ -24,7 +25,7 @@ function NewPlaylist({ className }) {
             },
             body: JSON.stringify(playlistInfo)
         })
-
+        getPlaylists(currentUser.id)
         closeModal()
     }
 

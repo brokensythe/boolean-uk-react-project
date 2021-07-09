@@ -22,7 +22,7 @@ function LoginForm() {
 
         if (correctUser.password===e.target.password.value) {
             setCurrentUser(correctUser)
-            history.push("/playlist")
+            history.push("/playlists")
         }else wrongPassword()
     }
 

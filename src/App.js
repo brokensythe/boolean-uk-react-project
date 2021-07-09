@@ -5,17 +5,20 @@ import RegistrationPage from "./Components/RegistrationPage";
 import PlaylistPage from "./Components/PlaylistPage";
 import SearchPage from "./Components/SearchPage";
 import ModalContainer from "./modals/ModalContainer";
-import useStore from "./hooks/useStore";
-import { useEffect } from "react";
+import SongPage from "./Components/SongPage";
 
 export default function App() {
+
   return  (
     <>
       <Switch>
+        <Route path="/playlist">
+          <SongPage />
+        </Route>
         <Route path="/search">
           <SearchPage />
         </Route>
-        <Route path="/playlist">
+        <Route path="/playlists">
           <PlaylistPage />
         </Route>
         <Route path="/register">

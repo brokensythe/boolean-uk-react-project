@@ -39,7 +39,11 @@ const useStore = create((set, get) => ({
             }
             get().setSearchResults(myResults)
         })
-    }
+    },
+    selectedSong: {},
+    setSelectedSong: (object)=>{set(state=>({selectedSong: object}))},
+    currentPlaylist: {},
+    setCurrentPlaylist: (object)=>{set(state=>({currentPlaylist: object}))},
     }
 ) )
 
