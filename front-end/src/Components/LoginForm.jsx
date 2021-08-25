@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 function LoginForm() {
 
+    const currentUser = useStore(store=>store.currentUser)
     const setCurrentUser = useStore(store=>store.setCurrentUser)
     const users = useStore(store=>store.users)
     const setUsers = useStore(store=>store.setUsers)
@@ -14,26 +15,43 @@ function LoginForm() {
 
     const history = useHistory()
 
-    useEffect(()=>{
-        fetch("http://localhost:4000/users")
-        .then(resp=>resp.json())
-        .then(setUsers)
-    }, [setUsers])
+    // useEffect(()=>{
+    //     fetch("http://localhost:4000/users")
+    //     .then(resp=>resp.json())
+    //     .then(setUsers)
+    // }, [setUsers])
 
-    function handlesubmit(e) {
+    async function handlesubmit(e) {
         e.preventDefault()
 
-        const correctUser = users.find(user=>user.username===e.target.username.value)
-
-        if (!correctUser) {
-            noSuchUser()
-            return
+        const loginDetails = {
+            username: e.target.username.value,
+            password: e.target.password.value
         }
 
-        if (correctUser.password===e.target.password.value) {
-            setCurrentUser(correctUser)
-            history.push("/playlists")
-        }else wrongPassword()
+        await fetch("http://localhost:4000/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(loginDetails)
+        })
+        .then(setCurrentUser)
+
+        console.log(currentUser)
+        
+
+        // const correctUser = users.find(user=>user.username===e.target.username.value)
+
+        // if (!correctUser) {
+        //     noSuchUser()
+        //     return
+        // }
+
+        // if (correctUser.password===e.target.password.value) {
+        //     setCurrentUser(correctUser)
+        //     history.push("/playlists")
+        // }else wrongPassword()
     }
 
     return  (

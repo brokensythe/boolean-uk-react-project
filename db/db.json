@@ -14,6 +14,16 @@
       "username": "Jonathon",
       "password": "cool dude",
       "id": 3
+    },
+    {
+      "username": "Duncan",
+      "password": "prettystrong123",
+      "id": 4
+    },
+    {
+      "username": "Rico😊",
+      "password": "password",
+      "id": 5
     }
   ],
   "playlists": [
@@ -71,6 +81,40 @@
       "userId": 3,
       "songs": [],
       "id": 5
+    },
+    {
+      "name": "Bathtime Playlist",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.wY9uwpnysjKeUdaPvokcYQHaE8%26pid%3DApi&f=1",
+      "userId": 4,
+      "songs": [
+        {
+          "id": 13529563,
+          "name": "Only Girl (In The World)",
+          "artistId": 564,
+          "artist": "Rihanna",
+          "albumId": 1238967,
+          "album": "Loud",
+          "image": "https://cdns-images.dzcdn.net/images/cover/3a12c64bb52a167944783878ffe41f02/250x250-000000-80-0-0.jpg"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "coding jams",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.KcOJg3DSe9SGmhHd6GcJygHaE4%26pid%3DApi&f=1",
+      "userId": 5,
+      "songs": [
+        {
+          "id": 24241611,
+          "name": "Quality Control",
+          "artistId": 2952,
+          "artist": "Jurassic 5",
+          "albumId": 2316871,
+          "album": "Quality Control",
+          "image": "https://cdns-images.dzcdn.net/images/cover/df4770d07b7f589ff159344777e2f0b5/250x250-000000-80-0-0.jpg"
+        }
+      ],
+      "id": 7
     }
   ],
   "genres": [
